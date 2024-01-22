@@ -1,4 +1,4 @@
-from octoflow.core.plugins import Package
+from octoflow.plugin import Package
 
 __all__ = [
     "package",
