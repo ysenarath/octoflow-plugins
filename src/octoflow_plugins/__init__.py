@@ -1,4 +1,4 @@
-from octoflow.core.plugins import Package
+from octoflow.plugin import Package
 
 __all__ = [
     "package",
@@ -11,6 +11,10 @@ package = Package(
     modules=[
         {
             "name": ".tracking",
+            "package": "octoflow_plugins",
+        },
+        {
+            "name": ".data",
             "package": "octoflow_plugins",
         },
     ],
