@@ -23,7 +23,7 @@ classifiers = [ # ToDo: Modify according to your needs!
     "Programming Language :: Python :: Implementation :: CPython",
 ]
 # direct dependencies of this package, installed when users `pip install octoflow` later.
-dependencies = ["octoflow>=0.0.12"]
+dependencies = ["octoflow>=0.0.14"]
 dynamic = ["version"]
 
 [project.scripts]
