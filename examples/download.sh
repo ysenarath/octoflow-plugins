@@ -1,0 +1,2 @@
+wget https://raw.githubusercontent.com/plotly/datasets/master/2014_usa_states.csv -O data/2014_usa_states.csv
+wget https://raw.githubusercontent.com/brandiqa/json-examples/master/src/google_markers.json -O data/google_markers.json
