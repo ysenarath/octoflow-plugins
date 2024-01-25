@@ -53,7 +53,7 @@ path = "src/octoflow_plugins/__init__.py"
 # version-file = "src/octoflow/_version.py"
 
 [tool.hatch.build]
-packages = ["src/octoflow_plugins"]
+packages = ["src/octoflow_plugins", "src/octoflow-stubs"]
 
 [tool.hatch.build.targets.sdist]
 exclude = ["/.github"]
