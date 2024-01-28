@@ -12,6 +12,10 @@ package = Package(
             "package": "octoflow_plugins.tracking.artifacts",
         },
         {
+            "name": ".torch_",
+            "package": "octoflow_plugins.tracking.artifacts",
+        },
+        {
             "name": ".pandas_",
             "package": "octoflow_plugins.tracking.artifacts",
         },

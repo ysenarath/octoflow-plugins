@@ -24,10 +24,10 @@ class PreTrainedModelHandler(ArtifactHandler, name="transformers.PreTrainedModel
 
     def exists(self) -> bool:
         model_dir = self.path / "model"
-        return (self.path / "task.json").exists() and model_dir.exists() and model_dir.is_dir()
+        return (self.path / "model.json").exists() and model_dir.exists() and model_dir.is_dir()
 
     def load(self) -> Union[PreTrainedModel, TFPreTrainedModel]:
-        with open(self.path / "task.json", encoding="utf-8") as f:
+        with open(self.path / "model.json", encoding="utf-8") as f:
             kwargs = json.load(f)
         module = importlib.import_module(name=kwargs["module"])
         model_class: Type[PreTrainedModel] = getattr(module, kwargs["name"])
@@ -36,7 +36,7 @@ class PreTrainedModelHandler(ArtifactHandler, name="transformers.PreTrainedModel
     def save(self, obj: Union[PreTrainedModel, TFPreTrainedModel]):
         obj.save_pretrained(self.path / "model")
         model_class = type(obj)
-        with open(self.path / "task.json", "w", encoding="utf-8") as f:
+        with open(self.path / "model.json", "w", encoding="utf-8") as f:
             json.dump(
                 {
                     "module": model_class.__module__,
