@@ -8,23 +8,23 @@ package = Package(
     "artifacts",
     modules=[
         {
-            "name": ".json_",
+            "name": ".json_handler",
             "package": "octoflow_plugins.tracking.artifacts",
         },
         {
-            "name": ".torch_",
+            "name": ".torch_handler",
             "package": "octoflow_plugins.tracking.artifacts",
         },
         {
-            "name": ".pandas_",
+            "name": ".pandas_handler",
             "package": "octoflow_plugins.tracking.artifacts",
         },
         {
-            "name": ".pickle_",
+            "name": ".pickle_handler",
             "package": "octoflow_plugins.tracking.artifacts",
         },
         {
-            "name": ".transformers_",
+            "name": ".transformers_handler",
             "package": "octoflow_plugins.tracking.artifacts",
         },
     ],
